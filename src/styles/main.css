@@ -1,0 +1,80 @@
+/**
+ * main.css
+ *
+ * 💠 FLOURISHING SOULS FOUNDATION – GLOBAL THEME VARS (FALLBACKS) 💠
+ * This file is a compatibility layer: use in rare cases when CSS variables
+ * from theme.css are not accessible. Sync with src/styles/theme.css!
+ *
+ * NOTE: For main theming, import and extend theme.css.
+ * DO NOT use @tailwind or imports here.
+ */
+
+/* ---------------------------------------------------
+   FALLBACK CSS VARIABLES (sync with theme.css tokens)
+---------------------------------------------------- */
+:root {
+  /* ======= BRAND PALETTE ======= */
+  --fsf-primary: #4338ca;
+  --fsf-primary-light: #6366f1;
+  --fsf-primary-dark: #312e81;
+  --fsf-accent: #f472b6;
+  --fsf-accent-dark: #be185d;
+  --fsf-accent-contrast: #fff;
+
+  /* ======= STATUS COLORS ======= */
+  --fsf-success: #10b981;
+  --fsf-success-bg: #ecfdf5;
+  --fsf-warning: #fbbf24;
+  --fsf-warning-bg: #fef3c7;
+  --fsf-error: #e11d48;
+  --fsf-error-bg: #fef2f2;
+
+  /* ======= GRAYS & TEXT ======= */
+  --fsf-bg: #fafbfc;
+  --fsf-bg-alt: #f3f4f6;
+  --fsf-bg-card: #fff;
+  --fsf-border: #d1d5db;
+  --fsf-border-dark: #a1a1aa;
+  --fsf-text: #22223b;
+  --fsf-text-muted: #6b7280;
+  --fsf-text-inverse: #fff;
+
+  /* ======= MISC LAYOUT ======= */
+  --header-height: 4rem;
+  --sidebar-width: 16rem;
+  --rounded-lg: 0.75rem;
+  --rounded-full: 9999px;
+  --focus-ring: 0 0 0 2px var(--fsf-accent);
+
+  /* ======= SHADOWS ======= */
+  --shadow-sm: 0 1px 2px 0 rgba(16,24,40,0.05);
+  --shadow-md: 0 4px 8px 0 rgba(67,56,202,0.08);
+  --shadow-lg: 0 8px 32px 0 rgba(67,56,202,0.12);
+}
+
+/* ======= DARK-MODE COMPAT ======= */
+body[data-theme="dark"], .theme-dark {
+  --fsf-bg: #18192f;
+  --fsf-bg-alt: #23244a;
+  --fsf-bg-card: #202139;
+  --fsf-primary: #818cf8;
+  --fsf-primary-light: #a5b4fc;
+  --fsf-primary-dark: #3730a3;
+  --fsf-accent: #f472b6;
+  --fsf-accent-dark: #db2777;
+  --fsf-accent-contrast: #111113;
+  --fsf-success: #34d399;
+  --fsf-success-bg: #054f31;
+  --fsf-warning: #fde68a;
+  --fsf-warning-bg: #78350f;
+  --fsf-error: #fb7185;
+  --fsf-error-bg: #7f1d1d;
+  --fsf-border: #292c42;
+  --fsf-border-dark: #4b4b67;
+  --fsf-text: #f2f3f7;
+  --fsf-text-muted: #9ca3af;
+  --fsf-text-inverse: #111113;
+  --shadow-sm: 0 1px 4px 0 rgba(20,20,40,0.12);
+  --shadow-md: 0 4px 12px 0 rgba(67,56,202,0.17);
+  --shadow-lg: 0 14px 48px 0 rgba(67,56,202,0.25);
+}

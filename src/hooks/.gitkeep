@@ -1,0 +1,20 @@
+/**
+ * This file is intentionally left blank to ensure the `src/hooks/` directory exists in the repository.
+ *
+ * Production-ready, concrete reusable hooks must be created as separate `.js` files within this directory.
+ * For example: 
+ *   - useAuth.js           # User authentication state and effects
+ *   - useDonate.js         # Donation/payment UI and state logic
+ *   - useEvents.js         # Events fetching, registering, etc.
+ *   - useGallery.js        # Gallery media interaction logic
+ *
+ * Do NOT remove this file unless at least one real hook exists in this folder.
+ *
+ * For new hooks, use the following conventions:
+ *   1. Hooks should start with `use` and export a default function.
+ *   2. All hooks must be production-grade, real, and safe for handling live user data.
+ *   3. Avoid any stubs, mockups, or simulations—integrate with live services or meaningful fallbacks.
+ *   4. Add JSDoc comments for type hints and documentation.
+ *   5. Test thoroughly with realistic end-to-end scenarios before use in production.
+ */
+

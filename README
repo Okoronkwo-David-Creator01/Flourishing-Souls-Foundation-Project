@@ -1,0 +1,297 @@
+## Project Overview
+
+Flourishing Souls Foundation is a charity platform designed to support individuals in need, including the poor and the jobless. The platform aims to provide comprehensive support and create opportunities for all. This project will be developed using HTML, JavaScript, CSS, and any additional necessary technologies to ensure robust functionality and an outstanding user experience.
+
+## Platform Features
+
+- **Donations:** Allow users to easily make donations to support the foundation's work.
+- **Volunteer Sign-Up:** Users can register to volunteer and become part of our mission by contacting us.
+- **Request Support:** Individuals can reach out through the platform to request assistance.
+- **Events & Activities:** View updates, upcoming events, and the foundation’s ongoing movements.
+- **Impact Gallery:** Showcase all the places, people, and communities we've helped, complete with well-designed images and videos.
+- **Contact & Engagement:** Easy ways for users to get in touch or engage with our team.
+
+## Project Structure
+
+- **Full Project Name:** Flourishing Souls Foundation
+- **Logo:** Please place the official logo inside the `images` folder.
+- **Files & Folders:** The repository will include all the necessary files and directories. Please make sure to maintain the structure as described in the documentation and code.
+
+## Setup & Requirements
+
+A full list of the dependencies and instructions for setting up and running the project will be provided. All package requirements and terminal commands needed to run the project will be specified in the setup documentation.
+
+*Please ensure that every file and folder provided matches the code requirements as described above and in future specifications.*
+
+
+<details>
+<summary><strong>📁 Complete Project Structure</strong> (Production Ready)</summary>
+
+
+
+
+I am starting the Flourishing Souls Foundation platform from scratch, and I want a large, production-ready, enterprise-level project with a modern, beautiful, user-centric design inspired by Notion and DropShop. The stack will be based on HTML, JavaScript, and CSS (preferably with TailwindCSS), and must leverage the following:
+
+- **React** (with Vite as the build tool for fast modern development)
+- **TailwindCSS** for highly customizable styling
+- **JavaScript/TypeScript** for maintainable, scalable code (preferably TypeScript for type safety, but JS is also fine)
+- **Paystack** integration for secure donations
+- **Supabase** (Postgres+BaaS) for all database needs and authentication (please include fallback/option for Google or Clerk authentication if needed)
+- **Optional Node.js/Express backend** for extensibility if/when needed (API/connections/restricted/SSR routes)
+
+---
+
+## Project Overview
+
+**Flourishing Souls Foundation** is a comprehensive charity and empowerment platform targeting individuals needing support—such as the poor, jobless, or otherwise vulnerable. The platform enables:
+- Donations (via Paystack)
+- Volunteer sign-up (and management)
+- Request for support (contact/help process)
+- Events and activities display (dynamic, filterable, real-time updates if possible)
+- Media gallery (high impact, visually stunning, performant display of images/videos/testimonials)
+- Modern authentication (Supabase, Google, Clerk)
+- Admin dashboard for impact visualization & operational management
+
+---
+
+## Project Description
+
+This project is intended to be visually impressive, large-scale, and production grade. It uses a modular architecture and is set up for scalability, team collaborations, and seamless integrations.
+- All files and folders should match the complex, enterprise-grade structure below
+- The platform must offer dark/light mode, mobile-responsiveness, accessibility, and SEO/readability
+- Includes Paystack for donations, Supabase as database/auth backend, and extensibility for third-party integrations (Google/Clerk)
+
+---
+
+## Accurate Roadmap
+
+1. **Prepare & Design**
+   - Wireframe UI/UX with Notion/DropShop inspiration (landing, auth, dashboard, feature pages, admin)
+   - Design and finalize branding assets (logo, theme, palette, images)
+2. **Scaffold Project**
+   - Initialize codebase via Vite with React and TailwindCSS
+   - Connect styling, configure ESLint/prettier, and integrate TypeScript (optional)
+   - Set up environment variables, .env configuration, and initial Supabase/Paystack credentials placeholding
+3. **Build Core Modules**
+   - Create authentication flows (Supabase+Google/Clerk fallback)
+   - Implement UI for donation, volunteer, support request, event, and gallery features
+   - Set up Paystack donation integration
+   - Code API utilities to connect with Supabase (queries, mutations, real-time options)
+4. **Enhance & Polish**
+   - Add animations, transitions, adaptive layouts, and accessibility enhancements
+   - Implement admin dashboard, analytics, audit log, and advanced filtering for data-driven display
+5. **Test & Optimize**
+   - Cross-browser/device testing, accessibility audits, and SEO checks
+   - Optimize performance, lazy loading, and bundle sizes
+6. **Deploy & Document**
+   - Set up deployment (Vercel, Netlify, or hosting of choice)
+   - Complete comprehensive README and contributor documentation
+
+---
+
+## Full Complex, Production-Ready Project Folder Structure
+
+
+
+
+
+```
+flourishing-souls-foundation/
+│
+├── .env.example
+├── .gitignore
+├── README.md
+├── package.json
+├── yarn.lock / package-lock.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.json (if using TypeScript)
+├── vite.config.js
+│
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── images/
+│       ├── logo.png
+│       ├── hero/
+│           └── .gitkeep
+│       └── brand-assets/
+│           └── .gitkeep
+│
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   │   └── .gitkeep
+│   │   ├── videos/
+│   │   │   └── .gitkeep
+│   │   ├── icons/
+│   │   │   └── .gitkeep
+│   │   └── fonts/
+│   │       └── .gitkeep
+│   ├── components/
+│   │   ├── common/
+│   │   │   └── index.jsx
+│   │   ├── layout/
+│   │   │   ├── Layout.jsx         # Main layout wrapper for pages
+│   │   │   ├── Header.jsx         # Site/global header or nav
+│   │   │   ├── Footer.jsx         # Global footer
+│   │   │   ├── Sidebar.jsx        # Navigation/sidebar (if needed)
+│   │   │   ├── AuthLayout.jsx     # Layout wrapper for auth pages
+│   │   │   ├── AdminLayout.jsx    # Layout for admin area
+│   │   │   ├── MainContent.jsx    # Main content container
+│   │   │   └── index.jsx          # Export for all layout components        # e.g. exports: Layout, Button, Modal, ThemeSwitcher, Notification components
+│   │   ├── auth/
+│   │   │   ├── SignIn.jsx
+│   │   │   ├── SignUp.jsx
+│   │   │   ├── SocialAuth.jsx
+│   │   │   └── ForgotPassword.jsx
+│   │   ├── payments/
+│   │   │   ├── PaystackButton.jsx
+│   │   │   ├── DonationForm.jsx
+│   │   │   ├── Receipt.jsx
+│   │   │   └── SuccessScreen.jsx
+│   │   ├── volunteer/
+│   │   │   ├── VolunteerForm.jsx
+│   │   │   └── VolunteerList.jsx
+│   │   ├── support/
+│   │   │   ├── SupportRequestForm.jsx
+│   │   │   └── SupportList.jsx
+│   │   ├── events/
+│   │   │   ├── EventCard.jsx
+│   │   │   ├── EventList.jsx
+│   │   │   ├── Calendar.jsx
+│   │   │   └── EventDetails.jsx
+│   │   ├── gallery/
+│   │   │   ├── GalleryGrid.jsx
+│   │   │   ├── GalleryItem.jsx
+│   │   │   ├── VideoPlayer.jsx
+│   │   │   └── PhotoViewer.jsx
+│   │   └── admin/
+│   │       ├── Dashboard.jsx
+│   │       ├── ManagementPanel.jsx
+│   │       ├── UserList.jsx              # List and manage users
+│   │       ├── RoleManager.jsx           # Assign and modify user roles
+│   │       ├── AdminAuthGuard.jsx        # Protect admin routes/components
+│   │       └── Settings.jsx              # Admin settings and preferences
+│   ├── contexts/
+│   │   └── index.js       # export * from AuthContext, ThemeContext, etc.
+│   ├── hooks/
+│   │   ├── useAuth.js
+│   │   ├── useDonate.js
+│   │   ├── useEvents.js
+│   │   ├── useGallery.js
+│   │   └── .gitkeep
+│   ├── lib/
+│   │   ├── paystack.js
+│   │   ├── supabase.js
+│   │   └── api.js
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Donate.jsx
+│   │   ├── Volunteer.jsx
+│   │   ├── Support.jsx
+│   │   ├── Events.jsx
+│   │   ├── Gallery.jsx
+│   │   ├── Admin.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   └── NotFound.jsx
+│   ├── routes/
+│   │   └── AppRouter.jsx
+│   ├── services/
+│   │   ├── supabaseService.js      # API logic for Supabase
+│   │   ├── paystackService.js      # API logic for Paystack
+│   │   └── authService.js          # API logic for Auth
+│   ├── styles/
+│   │   ├── tailwind.css
+│   │   ├── main.css
+│   │   └── theme.css
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.js
+│
+├── scripts/
+│   ├── seed.js       # Example utility/deployment/seed script
+│   └── .gitkeep
+│
+└── backend/ (OPTIONAL: for server-side enhancements)
+    ├── controllers/
+    │   ├── userController.js
+    │   └── .gitkeep
+    ├── middleware/
+    │   ├── authMiddleware.js
+    │   └── .gitkeep
+    ├── models/
+    │   ├── userModel.js
+    │   └── .gitkeep
+    ├── routes/
+    │   ├── userRoutes.js
+    │   └── .gitkeep
+    ├── app.js
+    └── server.js
+
+```
+
+---
+
+## Installations & Dependencies (Terminal Setup)
+
+### 1. Scaffold the React + Vite + TailwindCSS Project
+
+```bash
+git clone https://github.com/your-username/flourishing-souls-foundation.git
+cd flourishing-souls-foundation
+npm create vite@latest . -- --template react
+npm install
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+### 2. Install Required Dependencies
+
+```bash
+npm install react-router-dom axios @supabase/supabase-js
+npm install @headlessui/react @heroicons/react
+npm install @paystack/paystack-js
+# Typescript support (optional)
+npm install --save typescript @types/react @types/node
+# For Google or Clerk Auth (if needed)
+npm install @clerk/clerk-react @clerk/clerk-sdk@next
+npm install @react-oauth/google
+```
+
+### 3. Configure Tailwind and Supabase/Env
+
+- Fill out `.env` files for Supabase and Paystack keys.
+- Set up Tailwind in `tailwind.config.js` and `src/styles/tailwind.css`.
+
+### 4. Run Development Server
+
+```bash
+npm run dev
+```
+
+### 5. (If Backend Required)
+```bash
+cd backend
+npm init -y
+npm install express cors dotenv
+# Optional: Add more as needed, e.g. nodemon, mongoose, etc
+node server.js
+```
+
+---
+
+Once the full folder structure is set up and dependencies installed, let me know which file or feature to implement, and I will provide the code for each file or module as needed. Please ensure that your environment uses the correct API keys and credentials for Supabase and Paystack in the `.env` file. 
+
+
+
+
+
+Please i want you to build me a charity foundation using html java script and css and any other programming languages needed that support every aspect of people life both the poor or the jobless that all need support. So the platform is meant to contain features that allow people to donate, volunteer to be a part of the mission by contacting us, reach out for support, view all events and movements on the platform that we have done, and showing all the places and people we have helped and supported, with picture and video perfect designed and arranged. Then the full platform name is Flourishing Souls foundation with the Logo inside the Images Folder. Iwant you to give me the full complete project fiolder and all the requirements to run for the setup and packeages used (Terminal Run Code). Please ensure that every file and folder is muching with the code i will ask
+
+
+Please i want to start the project from scratch so i want and overview, project description, Accurate roadmap and the full complete complex production ready project folder structure for the project with everything to run on the terminal for the setup and dependencies. then when i am done setting up i will ask you for the code to each seperate file. please use html, css (If possible tailwindcss) and javascript with any other programming language needed and everything
+When you run `npm create vite@latest` or other Vite commands, you might see a prompt like:
+
+```

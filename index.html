@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Flourishing Souls Foundation — Empowering lives through support, donations, volunteering, events, and resources."
+    />
+    <meta
+      name="keywords"
+      content="Charity, Nonprofit, Foundation, Support, Donate, Volunteer, Events, Gallery, Flourishing Souls"
+    />
+    <meta name="author" content="Flourishing Souls Foundation" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#1a202c" />
+
+    <title>Flourishing Souls Foundation</title>
+
+    <!-- Preconnect/Prefetch for Fonts for Faster Load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind & Custom CSS -->
+    <link rel="stylesheet" href="/src/styles/tailwind.css" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <link rel="stylesheet" href="/src/styles/theme.css" />
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Flourishing Souls Foundation" />
+    <meta property="og:description" content="Empowering lives through support, donations, volunteering, and more." />
+    <meta property="og:image" content="/images/logo.svg" />
+    <meta property="og:url" content="https://flourishingsoulsfoundation.org" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Flourishing Souls Foundation" />
+    <meta name="twitter:description" content="Empowering lives through support, donations, volunteering, and more." />
+    <meta name="twitter:image" content="/images/logo.svg" />
+
+    <!-- Security & Performance (Best Practices) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' https://js.paystack.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=()" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://flourishingsoulsfoundation.org" />
+
+    <!-- Analytics (e.g., Google Analytics - replace with actual tracking ID)-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-XXXXXXXXX-X');
+    </script>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-50 font-inter antialiased">
+    <!-- Accessible Portal Root for Modals -->
+    <div id="portal-root"></div>
+    <!-- React Root Mount -->
+    <div id="root"></div>
+    <!-- Main Entry Point -->
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- Optionally: Defer non-critical JS or add third-party integrations as needed -->
+  </body>
+</html>

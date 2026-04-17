@@ -1,0 +1,123 @@
+/**
+ * TailwindCSS entrypoint for Flourishing Souls Foundation (FSF)
+ * Loads Tailwind's base (Preflight), components, and utilities layers.
+ * No theme('...') or non-standard PostCSS allowed! See theme tokens in theme.css.
+ */
+
+/* --- TailwindCSS core (v4) --- */
+@import "tailwindcss";
+
+/* ================= FSF CUSTOM LAYERS (sync with theme.css) ================= */
+
+/* 1. Base: Font-stack and background using CSS variables from theme.css */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, Arial, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* theme.css provides --fsf-bg, fallback to #fafbfc */
+    background-color: var(--fsf-bg, #fafbfc);
+  }
+}
+
+/* 2. Focus outline matches theme accent (see --fsf-accent in theme.css) */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--fsf-accent, #f472b6);
+    outline-offset: 2px;
+  }
+}
+
+/* 3. Smooth transitions for all common interactive elements */
+@layer base {
+  button,
+  a,
+  [role="button"],
+  input,
+  textarea,
+  select,
+  summary {
+    transition-property: background-color, color, border-color, box-shadow, transform, opacity;
+    transition-duration: 160ms;
+    transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  }
+}
+
+/* 4. App-wide dark mode (class strategy, see theme.css for tokens) */
+@layer base {
+  html.dark {
+    background-color: var(--fsf-bg, #18192f);
+    color-scheme: dark;
+  }
+}
+
+/* 5. Utility color classes using the tokens from theme.css */
+@layer utilities {
+  .bg-fsf-primary    { background-color: var(--fsf-primary, #4338ca); }
+  .bg-fsf-accent     { background-color: var(--fsf-accent, #f472b6); }
+  .bg-fsf-error      { background-color: var(--fsf-error, #e11d48); }
+  .text-fsf-primary  { color: var(--fsf-primary, #4338ca); }
+  .text-fsf-accent   { color: var(--fsf-accent, #f472b6); }
+  .text-fsf-error    { color: var(--fsf-error, #e11d48); }
+  .border-fsf-primary { border-color: var(--fsf-primary, #4338ca); }
+  .border-fsf-accent { border-color: var(--fsf-accent, #f472b6); }
+  .border-fsf-error  { border-color: var(--fsf-error, #e11d48); }
+}
+
+/* 6. Responsive container helpers (ensure config has xl, lg!) */
+@layer components {
+  .container-xl { @apply mx-auto px-4 max-w-screen-xl; }
+  .container-lg { @apply mx-auto px-4 max-w-screen-lg; }
+}
+
+/* 7. Visually hidden utility for accessibility */
+@layer utilities {
+  .sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+}
+
+/* 8. Form input highlight/error states (use CSS vars, match theme.css) */
+@layer components {
+  .form-input:focus {
+    border-color: var(--fsf-accent, #f472b6);
+    box-shadow: 0 0 0 2px var(--fsf-accent, #f472b6);
+  }
+  .form-input.error {
+    border-color: var(--fsf-error, #e11d48);
+    background: var(--fsf-error-bg, #fef2f2);
+  }
+}
+
+/* 9. NProgress or loading bar (make sure bg-fsf-accent exists) */
+@layer components {
+  .nprogress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0.25rem;
+    z-index: 9999;
+    background-color: var(--fsf-accent, #f472b6);
+    transition-property: all;
+    transition-duration: 200ms;
+  }
+}
+
+/* 10. Plugins: place Tailwind plugin rules after this point as needed. */
+
+/* ==== Only use static or variable-based CSS here! theme('...') is NOT allowed. ==== */
+
+/* *******************************
+    After editing, rebuild your Tailwind CSS:
+      npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/output.css --watch
+    Or just run your usual dev script (e.g. npm run dev)
+   ******************************* */
